@@ -1,0 +1,33 @@
+name: 'Upload File to GDrive'
+description: 'A Github action for upload file to gdrive'
+inputs:
+  client-id:  # id of input
+    description: 'client id google drive'
+    required: true
+    default: null
+  client-secret:  # id of input
+    description: 'client secret google drive'
+    required: true
+    default: null
+  redirect-uri:  # id of input
+    description: 'redirect uri google drive'
+    required: true
+    default: null
+  refresh-token:  # id of input
+    description: 'refresh token google drive'
+    required: true
+    default: null
+  file-to-upload:
+    description: 'file to be upload'
+    required: true
+    default: null
+  filename:
+    description: 'filename on gdrive'
+outputs:
+  web-view-link: # id of output
+    description: ''
+  web-content-link: # id of output
+    description: ''
+runs:
+  using: 'node12'
+  main: 'index.js'
